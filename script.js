@@ -1,4 +1,6 @@
 resultado = []
+desloc = document.getElementById('deslocamento').value
+tempo = document.getElementById('tempo').value
 
 function limpar() {
     document.getElementById('deslocamento').value = ''
@@ -7,11 +9,13 @@ function limpar() {
 }
 
 function calcular() {
-    desloc = document.getElementById('deslocamento').value
-    tempo = document.getElementById('tempo').value
-
+    if(desloc == ''|| tempo == ''){
+    alert('preencha todos os campos')
+}else{
     velocidade = (desloc/tempo)
-
     document.getElementById('resultado').value = velocidade
+    
+    lista = document.getElementById('lista').value
 
+}
 }
