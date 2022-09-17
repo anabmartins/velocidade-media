@@ -7,7 +7,7 @@ header{
 }
 footer{
     background-color: #D2691E;
-    padding-top: 20px;
+    padding-top: 28px;
     padding-bottom: 20px;
     color: #ffff;
 }
@@ -16,9 +16,10 @@ footer{
     border: solid #FF8966;
     border-radius: 20px;
     margin-top: 25px;
-    margin-bottom: 25px;
     margin: auto;
     width: 50%;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
 }
 .container h1{
     background-color: #F5C88C;
@@ -50,5 +51,9 @@ input #resultado{
 textarea{
     border: solid #FF8258;
     border-radius: 20px;
+    width: 100%;
 }
-
+footer li{
+    font-size: 18px;
+    margin-left: 15px;
+}
