@@ -6,7 +6,9 @@ function limpar() {
     document.getElementById('velmedia').value = ''
     document.getElementById('lista').innerHTML = ''
 }
-
+if (localStorage.getItem('resultados') != null) {
+    resultados = JSON.parse(localStorage.getItem('resultados'))
+}
 function calcular() {
     desloc = document.getElementById('deslocamento').value
     tempo = document.getElementById('tempo').value
@@ -15,15 +17,16 @@ function calcular() {
     if(desloc == ''|| tempo == ''){
     alert('preencha todos os campos')
 }else{
+
     velMedia = (desloc/tempo).toFixed(2)
     document.getElementById('velmedia').value = velMedia
     resultados.unshift(velMedia)
-    document.getElementById('lista').innerHTML += `Velocidade média de ${velMedia}<br>`
+    document.getElementById('lista').innerHTML += `Velocidade média de ${velMedia} Km/h <br>`
     //local storage
-    if (localStorage.getItem('resultados') != null) {
-        resultados = JSON.parse(localStorage.getItem('resultados'))
-    }
-    localStorage.setItem('resultados', JSON.stringify(resultados))
+
+    resultados
+    window.localStorage.setItem('resultados', JSON.stringify(resultados))
+
     }
  }
   
