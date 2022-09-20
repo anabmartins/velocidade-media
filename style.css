@@ -57,3 +57,9 @@ footer li{
     font-size: 18px;
     margin-left: 15px;
 }
+#lista {
+    width: auto;
+    height: 250px;
+    border: solid #FF8258;
+    border-radius: 20px;
+}

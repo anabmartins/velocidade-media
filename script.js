@@ -9,13 +9,17 @@ function limpar() {
 function calcular() {
     desloc = document.getElementById('deslocamento').value
     tempo = document.getElementById('tempo').value
-    lista = document.getElementById('resposta').value
+    lista = document.getElementById('velmedia').value
+    hist = document.getElementById('lista').value
     if(desloc == ''|| tempo == ''){
     alert('preencha todos os campos')
 }else{
     velMedia = (desloc/tempo).toFixed(2)
     document.getElementById('velmedia').value = velMedia
     resultados.unshift(`Velocidade média de ${velMedia}`)
-    document.getElementById('resposta').innerHTML = `${resultados}` 
+// document.getElementById('lista').innerHTML += resultados + '<br>'
+    resultados.forEach(result => {
+    document.getElementById('lista').innerHTML += result + "<br>"
+   });
     }
 }
