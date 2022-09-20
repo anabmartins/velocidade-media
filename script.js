@@ -17,13 +17,12 @@ function calcular() {
 }else{
     velMedia = (desloc/tempo).toFixed(2)
     document.getElementById('velmedia').value = velMedia
-    resultados.unshift(`Velocidade média de ${velMedia}`)
-    document.getElementById('lista').innerHTML += velMedia + '<br>'
+    resultados.unshift(velMedia)
+    document.getElementById('lista').innerHTML += `Velocidade média de ${velMedia}<br>`
     //local storage
-    if (localStorage.getItem(velMedia) != null) {
+    if (localStorage.getItem('resultados') != null) {
         resultados = JSON.parse(localStorage.getItem('resultados'))
     }
-    resultados.unshift(velMedia)
     localStorage.setItem('resultados', JSON.stringify(resultados))
     }
  }
